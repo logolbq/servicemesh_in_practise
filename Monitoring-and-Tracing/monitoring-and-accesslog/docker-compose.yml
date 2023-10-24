@@ -10,7 +10,7 @@ services:
       - ENVOY_GID=0
     volumes:
     - "./front_envoy/envoy-config.yaml:/etc/envoy/envoy.yaml"
-    - "./logs/envoy:/logs/envoy"
+    - "./logs/envoy:/logs/envoy" #需要宿主机赋写权限
     networks:
       envoymesh:
         ipv4_address: 172.31.79.10
